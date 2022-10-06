@@ -9,17 +9,16 @@ function displayFriend (friend){
     //console.log(friend.results[0].name);
     let frndWrapper = document.getElementById('frnd-wrapper');
     console.log(friend);
-    frndWrapper.innerHTML = `<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    frndWrapper.innerHTML = `<div class="card" style="width: 16rem;">
+    <img src="${friend.results[0].picture.large}" class="card-img-top img-thumbnail" style="height: 12rem">
     <div class="card-body">
-      <h5 class="card-title">Name: ${friend.results[0].name.first +" " + friend.results[0].name.last} </h5>
-      <p><strong>Email</strong> : ${friend.results[0].email} </h3>
-      <p><strong>Gender</strong> : ${friend.results[0].gender} </h3>
-      <p><strong>Age</strong> : ${friend.results[0].dob.age} </p>
-      <p><strong>City</strong> : ${friend.results[0].location.city} </p>
-      <p><strong>Country</strong> : ${friend.results[0].location.country} </p>
+      <h5 class="card-title">${friend.results[0].name.first +" " + friend.results[0].name.last} </h5>
+      <h6><strong>Email</strong> : ${friend.results[0].email} </h6>
+      <h6><strong>Gender</strong> : ${friend.results[0].gender} </h6>
+      <h6><strong>Age</strong> : ${friend.results[0].dob.age} </h6>
+      <h6><strong>City</strong> : ${friend.results[0].location.city} </h6>
+      <h6><strong>Country</strong> : ${friend.results[0].location.country} </h6>
     </div>
   </div>`
 }
 
-getFriend()
