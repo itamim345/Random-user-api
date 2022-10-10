@@ -9,7 +9,7 @@ function displayFriend (friend){
     //console.log(friend.results[0].name);
     let frndWrapper = document.getElementById('frnd-wrapper');
     console.log(friend);
-    frndWrapper.innerHTML = `<div class="card" style="width: 16rem;">
+    frndWrapper.innerHTML = `<div class="card" style="width: 16rem; margin: 0 auto">
     <img src="${friend.results[0].picture.large}" class="card-img-top img-thumbnail" style="height: 12rem">
     <div class="card-body">
       <h5 class="card-title">${friend.results[0].name.first +" " + friend.results[0].name.last} </h5>
